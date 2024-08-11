@@ -1,5 +1,7 @@
 package com.example.capstone.store.controller;
 
+import com.example.capstone.store.database.dao.ProductDAO;
+import com.example.capstone.store.database.entity.Product;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,17 +10,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
+
 @Slf4j
 @Controller
 public class IndexController {
 
     @Autowired
-
     private ProductDAO productDao;
 
 
     @GetMapping("/" )
-
     public ModelAndView index(@RequestParam(required = false) Integer id) {
 
         ModelAndView response = new ModelAndView("index");
@@ -122,9 +124,7 @@ public class IndexController {
         Product product = productDao.findById(id);
         response.addObject("productKey", product);
 
-
-
-        response.addObject("message", "Hello World!");
+        //response.addObject("message", "Hello World!");
         return response;
 
 
@@ -137,7 +137,6 @@ public class IndexController {
 
     public ModelAndView indexPathVar(@PathVariable Integer id) {
 
-        // this function is for the home page of the website which is express as just a plain slash "/"
         ModelAndView response = new ModelAndView("index");
         Product product = productDao.findById(id);
         response.addObject("productKey", product);
@@ -151,7 +150,6 @@ public class IndexController {
 
     public ModelAndView allProducts() {
 
-        // this page is for another page of the website which is express as "/page-url"
         ModelAndView response = new ModelAndView("all-products");
         return response;
 
@@ -159,28 +157,25 @@ public class IndexController {
 
 
 
-    @GetMapping("/login")
+    //@GetMapping("/login")
 
-    public ModelAndView login() {
+    //public ModelAndView login() {
 
-        // this page is for another page of the website which is express as "/page-url"
-        ModelAndView response = new ModelAndView("login");
-        return response;
+        //ModelAndView response = new ModelAndView("login");
+        //return response;
 
-    }
+    //}
     @GetMapping("/search")
     public ModelAndView search(@RequestParam(required = false) String search) {
-        // this page is for another page of the website which is express as "/page-url"
+
         ModelAndView response = new ModelAndView("search");
 
         log.debug("The user searched for the term: " + search);
 
-        // I am going to add the user input back to the model, so that
-        // we can display the search term in the input field
         response.addObject("search", search);
 
 
-        List<Product> products = productDao.findByNameOrCode(search);
+        List<Product> products = productDao.findByName(search);
         products.stream().forEach(product -> {
             log.debug("Product: " + product.getName());
         });
@@ -188,7 +183,7 @@ public class IndexController {
         if (search == null || search.trim().isEmpty()) {
             products = productDao.findAll();
         } else {
-            products = productDao.findByNameOrCode(search);
+            products = productDao.findByName(search);
         }
 
 
