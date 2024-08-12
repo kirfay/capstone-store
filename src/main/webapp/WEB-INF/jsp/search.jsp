@@ -29,7 +29,7 @@
 </section>
 
 <!-- Products Found -->
-<section style="background-color: #f8f9fa;"> <!-- Light background for content section -->
+<section style="background-color: white;"> <!-- Light background for content section -->
     <div class="container">
         <div class="row pt-5">
             <div class="col-12">
@@ -46,9 +46,7 @@
                         <th>Price</th>
                         <th>Image</th>
                         <th>Description</th>
-                        <th>Edit</th>
-                        <th>Add to cart</th>
-
+                        <th>Status</th>
 
                     </tr>
                     </thead>
@@ -58,8 +56,7 @@
                             <td><a href="/?id=${product.id}" class="text-dark">${product.id}</a></td> <!-- Consistent text color -->
                             <td>${product.name}</td>
                             <td>${product.price}</td>
-                            <td><a href="/?id=${product.id}">Edit</a></td>
-                            <td><a href="/order/addToCart?id=${product.id}">Add To Cart</a></td>
+
                                 <c:choose>
                                     <c:when test="${empty product.imageUrl}">
                                         <p>No image available</p>
@@ -70,7 +67,10 @@
                                 </c:choose>
                             </td>
                             <td>${product.description}</td>
-                            <td><a href="/product/detail?productId=${product.id}" class="text-primary">Edit</a></td> <!-- Consistent link color -->
+                            <td>${status}</td> <!-- Consistent link color -->
+                            <td><a href="/?id=${product.id}">Edit</a></td>
+                            <td><a href="/order/addToCart?id=${product.id}">Add To Cart</a></td>
+
                         </tr>
                     </c:forEach>
                     </tbody>

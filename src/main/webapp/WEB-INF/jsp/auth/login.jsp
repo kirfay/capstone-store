@@ -5,7 +5,8 @@
 <!-- Page Header -->
 <section style="background-color: #212529; color: white; padding: 1rem 0;"> <!-- Reduced padding -->
     <div class="container">
-        <h1 class="text-center">Enter Credentials</h1>
+        <div class="row pt-5 pb-5">
+        <h1 class="text-center">LogIn</h1>
     </div>
 </section>
 

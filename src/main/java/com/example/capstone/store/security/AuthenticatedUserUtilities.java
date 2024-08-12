@@ -55,7 +55,7 @@ public class AuthenticatedUserUtilities {
     }
 
     public void manualAuthentication(HttpSession session, String username, String unencryptedPassword) {
-        // reset security principal to be the new user information
+
         Authentication request = new UsernamePasswordAuthenticationToken(username, unencryptedPassword);
         Authentication result = authenticationManager.authenticate(request);
         SecurityContext sc = SecurityContextHolder.getContext();

@@ -25,7 +25,6 @@ public class ErrorController {
 
 
     // this is optional ... im just showing you some things .. this is a catch all bucket for 404 errors
-    // I am using this in seriesreminder because I need to do additional processing for a 404 page
     @ExceptionHandler(NoResourceFoundException.class)
     @RequestMapping(value = {"/error/404", "/404"})
     public ModelAndView error404(HttpServletRequest request, Exception e) {
@@ -52,8 +51,6 @@ public class ErrorController {
         } else {
             log.warn("Unauthenticated user requested url that they do not have permission to " + request.getRequestURL());
         }
-
-
         log.warn(ex.getMessage());
 
         return response;
@@ -90,7 +87,7 @@ public class ErrorController {
         StringBuffer result = new StringBuffer();
         for (String frame : stack) {
             // Change this to be your package name
-            if (frame.contains("com.example.springboot")) {
+            if (frame.contains("com.example.capstone.store")) {
                 result.append(" &nbsp; &nbsp; &nbsp;" + frame.trim().substring(3) + "<br>\n");
             } else if (frame.contains("Caused by:")) {
                 result.append("Caused By:<br>");

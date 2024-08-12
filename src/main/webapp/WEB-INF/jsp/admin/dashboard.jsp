@@ -6,7 +6,7 @@
 <section style="background-color: #212529; color: white; padding: 1rem 0;"> <!-- Consistent with other pages -->
     <div class="container">
         <div class="row pt-5 pb-5">
-            <h1 class="text-center">This is an Admin JSP Page</h1>
+            <h1 class="text-center">Admin</h1>
         </div>
     </div>
 </section>

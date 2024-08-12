@@ -95,15 +95,7 @@
                                 <label class="form-label">Options</label>
                                 <div>
                                     <input type="radio" id="option1" name="options" value="option1">
-                                    <label for="option1">Radio buttons</label>
-                                </div>
-                                <div>
-                                    <input type="radio" id="option2" name="options" value="option2">
-                                    <label for="option2">Remember me.</label>
-                                </div>
-                                <div>
-                                    <input type="radio" id="option3" name="options" value="option3">
-                                    <label for="option3">Don't make me sign in again.</label>
+                                    <label for="option1">Radio button</label>
                                 </div>
                             </div>
 
@@ -112,7 +104,7 @@
                                 <label class="form-label">Checkbox</label>
                                 <div>
                                     <input type="checkbox" id="feature1" name="features" value="feature1">
-                                    <label for="feature1">Take me home</label>
+                                    <label for="feature1">Take This Product home</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="feature2" name="features" value="feature2">
@@ -145,21 +137,6 @@
     </div>
 </section>
 
-<script>
-    function handleClick() {
-        alert('A new product has been added!');
-    }
 
-    window.onload = function() {
-        var button = document.getElementById('my-button');
-        if (button) {
-            // Check for success status
-            var successStatus = '${success}'; // Assuming you have a success variable set in your model
-            if (successStatus === 'true') {
-                button.addEventListener('click', handleClick);
-            }
-        }
-    };
-</script>
 
 <jsp:include page="../include/footer.jsp"/>

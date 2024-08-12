@@ -35,8 +35,6 @@ public class IndexController {
         response.addObject("message", "Hello World!");
         return response;
 
-
-
     }
 
 
@@ -56,8 +54,6 @@ public class IndexController {
         response.addObject("message", "Hello World!");
         return response;
 
-
-
     }
 
     @GetMapping("/single-product" )
@@ -67,9 +63,6 @@ public class IndexController {
         ModelAndView response = new ModelAndView("single-product");
         Product product = productDao.findById(id);
         response.addObject("productKey", product);
-
-
-
         response.addObject("message", "Hello World!");
         return response;
 
@@ -79,39 +72,26 @@ public class IndexController {
 
 
     @GetMapping("/order-details" )
-
     public ModelAndView orderDetails(@RequestParam(required = false) Integer id) {
 
         // this function is for the home page of the website which is express as just a plain slash "/"
         ModelAndView response = new ModelAndView("order-details");
         Product product = productDao.findById(id);
         response.addObject("productKey", product);
-
-
-
         response.addObject("message", "Hello World!");
         return response;
-
-
 
     }
 
     @GetMapping("/admin-order-details" )
-
     public ModelAndView adminOrderDetails(@RequestParam(required = false) Integer id) {
 
         // this function is for the home page of the website which is express as just a plain slash "/"
         ModelAndView response = new ModelAndView("admin-order-details");
         Product product = productDao.findById(id);
         response.addObject("productKey", product);
-
-
-
         response.addObject("message", "Hello World!");
         return response;
-
-
-
     }
 
 
@@ -126,10 +106,7 @@ public class IndexController {
         //response.addObject("message", "Hello World!");
         return response;
 
-
-
     }
-
 
 
     @GetMapping("/{id}" )
@@ -184,7 +161,6 @@ public class IndexController {
         } else {
             products = productDao.findByName(search);
         }
-
 
         response.addObject("products", products);
 

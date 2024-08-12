@@ -108,11 +108,6 @@ public class ProductController {
     }
 
 
-
-
-
-
-
     @RequestMapping(value = "/createSubmit", method = { RequestMethod.POST, RequestMethod.GET })
     public ModelAndView createSubmit(@Valid CreateProductFormBean form, BindingResult bindingResult) {
 
@@ -148,7 +143,6 @@ public class ProductController {
             Product product = productService.createProduct(form);
 
             response.setViewName("redirect:/product/detail?productId=" + product.getId());
-
 
             return response;
         }

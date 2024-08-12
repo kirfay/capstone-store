@@ -4,7 +4,7 @@
     <div class="hero-content">
         <h2>Welcome </h2>
         <p>Find the best products at unbeatable prices.</p>
-        <button id="shopNowBtn">Shop Now</button>
+        <button id="shopNowBtn">Learn About Our Products</button>
     </div>
 </section>
 
@@ -14,12 +14,12 @@
         <div class="product-card">
             <img src="product1.jpg" alt="Product 1">
             <h3>Product 1</h3>
-            <p>$29.99</p>
+            <p>$10.00</p>
         </div>
         <div class="product-card">
             <img src="product2.jpg" alt="Product 2">
             <h3>Product 2</h3>
-            <p>$39.99</p>
+            <p>$200.00</p>
         </div>
         <div class="product-card">
             <img src="product3.jpg" alt="Product 3">
