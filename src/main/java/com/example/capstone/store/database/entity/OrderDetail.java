@@ -34,8 +34,8 @@ public class OrderDetail {
     private Integer orderId;
 
 
-    @Column(name = "product_id")
-    private Integer productId;
+    //@Column(name = "product_id")
+    //private Integer productId;
 
 
     @Column(name = "quantity")
@@ -45,4 +45,9 @@ public class OrderDetail {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id", insertable = false, updatable = false)
     private Order order;
+
+    @ToString.Exclude
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "product_id", nullable = false)
+    private Product product;
 }

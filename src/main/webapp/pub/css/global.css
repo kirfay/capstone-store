@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Grey Qo", cursive;
 }
 
 header {
@@ -13,7 +13,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #333;
+    background-color: Green;
     color: #fff;
 }
 
@@ -37,7 +37,7 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     height: 80vh;
-    background-image: url('hero-image.jpg');
+    background-image: url('file:///Users/kiranfayyaz/Downloads/undraw_business_chat_re_gg4h.svg');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -57,7 +57,7 @@ nav ul li a {
 .hero-section button {
     padding: 10px 20px;
     font-size: 18px;
-    color: #333;
+    color: purple;
     background-color: #fff;
     border: none;
     cursor: pointer;
@@ -65,7 +65,7 @@ nav ul li a {
 }
 
 .hero-section button:hover {
-    background-color: #ddd;
+    background-color: Teal;
 }
 
 .shop-section, .about-section, .contact-section {
@@ -81,7 +81,7 @@ nav ul li a {
 
 .product-card {
     width: 30%;
-    background-color: #f9f9f9;
+    background-color: whitesmoke;
     padding: 20px;
     text-align: center;
     border: 1px solid #ddd;
@@ -110,5 +110,5 @@ footer {
     padding: 20px;
     text-align: center;
     background-color: #333;
-    color: #fff;
+    color: White;
 }

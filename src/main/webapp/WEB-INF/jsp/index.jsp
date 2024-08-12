@@ -1,29 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Store</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header>
-    <div class="logo">
-        <h1>YourStore</h1>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#shop">Shop</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+<jsp:include page="include/header.jsp" />
 
 <section id="home" class="hero-section">
     <div class="hero-content">
-        <h2>Welcome to YourStore</h2>
+        <h2>Welcome </h2>
         <p>Find the best products at unbeatable prices.</p>
         <button id="shopNowBtn">Shop Now</button>
     </div>
@@ -52,7 +31,7 @@
 
 <section id="about" class="about-section">
     <h2>About Us</h2>
-    <p>We are a leading e-commerce store offering a wide range of products.</p>
+    <p>We are a leading e-commerce site providing you a full range of Amazon seller services. Let us help you turn your 9-5 job into a 24-hr Job! Start selling on Amazon today. </p>
 </section>
 
 <section id="contact" class="contact-section">
@@ -65,10 +44,6 @@
     </form>
 </section>
 
-<footer>
-    <p>&copy; 2024 YourStore. All Rights Reserved.</p>
-</footer>
 
-<script src="script.js"></script>
-</body>
-</html>
+<jsp:include page="include/footer.jsp" />
+

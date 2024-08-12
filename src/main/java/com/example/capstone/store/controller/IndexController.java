@@ -119,7 +119,6 @@ public class IndexController {
 
     public ModelAndView createUpdate(@RequestParam(required = false) Integer id) {
 
-        // this function is for the home page of the website which is express as just a plain slash "/"
         ModelAndView response = new ModelAndView("create-update");
         Product product = productDao.findById(id);
         response.addObject("productKey", product);
@@ -157,14 +156,14 @@ public class IndexController {
 
 
 
-    //@GetMapping("/login")
+    @GetMapping("/login")
 
-    //public ModelAndView login() {
+    public ModelAndView login() {
 
-        //ModelAndView response = new ModelAndView("login");
-        //return response;
+        ModelAndView response = new ModelAndView("login");
+        return response;
 
-    //}
+    }
     @GetMapping("/search")
     public ModelAndView search(@RequestParam(required = false) String search) {
 
